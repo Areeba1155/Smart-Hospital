@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://demo.smart-hospital.in/backend/usertemplate/assets/img/backgrounds/11.jpg);
+            background-repeat: no-repeat;
+            display: flex;
+        }
+
+        .left-content {
+            width: 37%;
+            height: 89vh;
+            background-color: rgb(11, 174, 255);
+            position: absolute;
+            top: 55px;
+            left: 43px;
+        }
+
+        .left-content img {
+            width: 230px;
+            height: 15vh;
+            padding: 30px 20px;
+        }
+
+        .left-content #icon {
+            position: absolute;
+            float: right;
+            font-size: 70px;
+            padding: 6px 120px;
+        }
+
+        .line {
+            border-bottom: 1px solid rgb(77, 66, 66);
+        }
+
+        .form h3 {
+            font-size: 20px;
+            color: white;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 15px 22px;
+        }
+
+        form,
+        input {
+            width: 89%;
+            height: 7vh;
+            margin: 8px 22px;
+            border: none;
+            border-radius: 4px;
+            padding: 0px 12px;
+        }
+
+        form,
+        .btn {
+            margin: 7px 22px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 38.3%;
+            background-color: #de995e;
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn {
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #066dd4;
+            transition: 0.6s ease-in-out;
+        }
+
+        .forgot a {
+            position: absolute;
+            top: 457px;
+            left: 26px;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .front-site a {
+            position: absolute;
+            top: 459px;
+            left: 265px;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .admin-login a {
+            position: absolute;
+            top: 459px;
+            left: 343px;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .vertical-line {
+            width: 0.5px;
+            height: 80%;
+            background-color: rgb(102, 91, 91);
+            margin: 66px 70px 30px 580px;
+        }
+
+        .right-content {
+            overflow: hidden;
+            width: 63%;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .content-side {
+            font-size: 14px;
+            padding: 80px;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .button1 {
+            display: flex;
+            margin: 4px 24px;
+        }
+
+        .button1 button {
+            font-size: 14px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .button2 {
+            display: flex;
+            margin: 10px 24px;
+
+        }
+
+        .button2 button {
+            font-size: 14px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .button3 {
+            display: flex;
+            margin: 10px 22px;
+
+        }
+
+        .button3 button {
+            font-size: 14px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        /* Media queries */
+        /* Media Queries */
+        /* @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            /* .left-content {
+                align-items: center;
+                width: 100%;
+                height: 80vh;
+                position: relative;
+                border: none;
+                margin-bottom: 20px;
+            }
+
+            .right-content {
+                width: 100%;
+                height: auto;
+            } */
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-content">
+            <img src="https://demo.smart-hospital.in/uploads/hospital_content/logo/0.png">
+            <i id="icon" style="color: white;" class="bi bi-key"></i>
+            <div class="line"></div>
+            <div class="form">
+                <h3>Admin Login</h3>
+                <input type="text" id="displayInput" placeholder="Username"><br>
+                <input type="password" id="passwordInput" placeholder="Password"><br>
+                <button type="submit" class="btn">
+                    Sign In</button>
+            </div>
+            <div class="button1">
+                <button onclick="displayTextbtnsuper()"
+                    style="background-color: #0084B4; color: white; padding: 8px 24.5px;"><i
+                        class="bi bi-person-badge"></i>
+                    Super Admin</button>
+                <button onclick="displayTextbtnadmin()"
+                    style="background-color: #1bbed3; color: white; padding: 8px 34px;"><i class="bi bi-person"></i>
+                    Admin</button>
+                <button onclick="displayTextbtndoctor()"
+                    style="background-color: #999999; color: white; padding: 8px 32px;"><i
+                        class="bi bi-file-person-fill"></i> Doctor</button>
+            </div>
+            <div class="button2">
+                <button onclick="displayTextbtnpharmacist()"
+                    style="background-color: #999; color: white; padding: 8px 38px;">Pharmacist</button>
+                <button onclick="displayTextbtnpathologist()"
+                    style="background-color: #e91e63; color: white; padding: 8px 22px;"><i
+                        class="bi bi-capsule"></i>Pathologist</button>
+                <button onclick="displayTextbtnradiologist()"
+                    style="background-color: #4aa64e; color: white; padding: 8px 26px;">Radiologist</button>
+            </div>
+            <div class="button3">
+                <button onclick="displayTextbtnaccountant()"
+                    style="background-color: #079fb7; color: white; padding: 8px 32px;"><i
+                        class="bi bi-calculator"></i>Accountant</button>
+                <button onclick="displayTextbtnreceptionist()"
+                    style="background-color: #0084B4; color: white; padding: 8px 25px;">Receptionist</button>
+                <button onclick="displayTextbtnnurse()"
+                    style="background-color: #1bbed3; color: white; padding: 8px 35px;"><i
+                        class="bi bi-bandaid"></i>Nurse</button>
+            </div>
+            <div class="forgot">
+                <a href="#"><i style="color: white; margin-right: 4px;" class="bi bi-key"></i>Forgot Password</a>
+            </div>
+            <div class="front-site">
+                <a href="./index.html" target="_blank"><i class="bi bi-c-circle"></i>Front site</a>
+            </div>
+            <div class="admin-login">
+                <a href="./index Admin login.html" target="_blank"><i class="bi bi-person"></i>Admin Login</a>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="right-content">
+            <div class="content-side">
+                <h2>What"s new in Smart Hospital & Research Center</h2><br><br>
+                <h3>4 Reasons to drink beetroot juice</h3><br>
+                <p>Beet is linked to the improvement of a variety of conditions, especially for anemia. While there...
+                </p><br>
+                <p>Read More</p><br>
+                <hr><br>
+                <h3>Early warning signs of Multiple Sclerosis</h3><br>
+                <p>The symptoms of MS vary widely from person to person and can affect any part of the body.
+                    Depending...</p><br>
+                <p>Read More</p><br>
+                <hr><br>
+                <h3>KIDNEY TRANSPLANTATION: FACTS AND MYTHS</h3><br>
+                <p>Patients whose kidneys have permanently failed with irreversible damage are termed to have chronic...
+                </p><br>
+                <p>Read More</p><br>
+                <hr><br>
+                <h3>What You Should Know About Antibiotics?</h3><br>
+                <p>We all fall ill, and doctors prescribe our medicine along with some antibiotics. Do you ever
+                    wonder...</p><br>
+                <p>Read More</p><br>
+                <hr><br>
+                <h3>Control diabetes for a healthy heart</h3><br>
+                <p>Diabetes has reached an epidemic level worldwide. Type 2 diabetes is marked by high levels of
+                    blood...</p><br>
+                <p>Read More</p><br>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script>
+        function displayTextbtnsuper() {
+            var displayText = "superadmin@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "superadmin@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnadmin() {
+            var displayText = "admin@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "admin@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtndoctor() {
+            var displayText = "doctor@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "doctor@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnpharmacist() {
+            var displayText = "pharmacist@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "pharmacist@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnpathologist() {
+            var displayText = "pathologist@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "pathologist@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnradiologist() {
+            var displayText = "radiologist@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "radiologist@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnaccountant() {
+            var displayText = "accountantn@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "accountant@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnreceptionist() {
+            var displayText = "receptionist@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "receptionist@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+        function displayTextbtnnurse() {
+            var displayText = "nurse@gmail.com"; // Change this to the text you want to display
+            document.getElementById("displayInput").value = displayText;
+            var displayPassword = "nurse@gmail.com"; // Change this to the password you want to display
+            document.getElementById("passwordInput").value = displayPassword;
+        }
+
+    </script>
+
+</body>
+
+</html>
