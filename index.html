@@ -33,6 +33,11 @@
             <img src="https://demo.smart-hospital.in/uploads/hospital_content/logo/front_logo-617a7008a31f58.32204916.png"
                 alt="Smart Hospital">
         </div>
+        <div class="hamburger">
+            <button id="hamburgerBtn">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
         <div class="info">
             <a href="#"><i class="bi bi-pencil-square"></i> Complain</a>
             <span><i class="bi bi-telephone-fill"></i> 9999955555</span>
@@ -41,25 +46,27 @@
         </div>
     </div>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="https://demo.smart-hospital.in/form/appointment">Appointment</a>
-        <a href="https://demo.smart-hospital.in/page/events">Events</a>
-        <div class="dropdown">
-            <button class="dropbtn">About Us
-                <i class="bi bi-caret-down-fill"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="https://demo.smart-hospital.in/page/about-hospitals">About Hospitals</a>
-                <a href="https://demo.smart-hospital.in/page/vision-and-mission">Vision and Mission</a>
-                <a href="https://demo.smart-hospital.in/page/meet-our-doctors">Meet Our Doctors</a>
-                <a href="https://demo.smart-hospital.in/page/faq">FAQ’s</a>
-                <a href="https://demo.smart-hospital.in/page/departments">Departments</a>
-                <a href="https://demo.smart-hospital.in/page/testimonials">testimonials</a>
+    <div class="navbar" id="navbar">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="https://demo.smart-hospital.in/form/appointment">Appointment</a>
+            <a href="https://demo.smart-hospital.in/page/events">Events</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us
+                    <i class="bi bi-caret-down-fill"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="https://demo.smart-hospital.in/page/about-hospitals">About Hospitals</a>
+                    <a href="https://demo.smart-hospital.in/page/vision-and-mission">Vision and Mission</a>
+                    <a href="https://demo.smart-hospital.in/page/meet-our-doctors">Meet Our Doctors</a>
+                    <a href="https://demo.smart-hospital.in/page/faq">FAQ’s</a>
+                    <a href="https://demo.smart-hospital.in/page/departments">Departments</a>
+                    <a href="https://demo.smart-hospital.in/page/testimonials">testimonials</a>
+                </div>
             </div>
-        </div>
-        <a href="https://demo.smart-hospital.in/page/gallery">Gallery</a>
-        <a href="https://demo.smart-hospital.in/page/contact-us">Contact Us</a>
+            <a href="https://demo.smart-hospital.in/page/gallery">Gallery</a>
+            <a href="https://demo.smart-hospital.in/page/contact-us">Contact Us</a>
+        </ul>
     </div>
     <div class="hero-section">
         <div class="left-content">
@@ -100,7 +107,7 @@
                                 <div class="datenews">
                                     12 <br> March
                                 </div>
-                                   KIDNEY TRANSPLANTATION: FACTS AND MYTHS                                                            
+                                KIDNEY TRANSPLANTATION: FACTS AND MYTHS
                             </a>
                         </div>
                         <div class="line">
@@ -108,7 +115,7 @@
                                 <div class="datenews">
                                     01 <br> March
                                 </div>
-                                   What You Should Know About Antibiotics?                                                            
+                                What You Should Know About Antibiotics?
                             </a>
                         </div>
                         <div class="line">
@@ -116,7 +123,7 @@
                                 <div class="datenews">
                                     22 <br> February
                                 </div>
-                                   Control diabetes for a healthy heart                                                            
+                                Control diabetes for a healthy heart
                             </a>
                         </div>
                     </div>
@@ -344,6 +351,12 @@
         autoSlide();
 
 
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navbar = document.getElementById('navbar');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
     </script>
 </body>
 
