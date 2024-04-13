@@ -148,6 +148,19 @@
             border-radius: 4px;
         }
 
+        .superadmin {
+            padding: 8px 27px;
+
+        }
+
+        .admin {
+            padding: 8px 36px;
+        }
+
+        .doctor {
+            padding: 8px 34px;
+        }
+
         .button2 {
             display: flex;
             margin: 10px 24px;
@@ -158,6 +171,18 @@
             font-size: 14px;
             border: 1px solid black;
             border-radius: 4px;
+        }
+
+        .pharmacist {
+            padding: 8px 40px;
+        }
+
+        .pathologist {
+            padding: 8px 24px;
+        }
+
+        .radiologist {
+            padding: 8px 28px;
         }
 
         .button3 {
@@ -172,30 +197,177 @@
             border-radius: 4px;
         }
 
-        /* Media queries */
+        .accountant {
+            padding: 8px 34px;
+        }
+
+        .receptionist {
+            padding: 8px 27px;
+        }
+
+        .nurse {
+            padding: 8px 37px;
+        }
+
         /* Media Queries */
-        /* @media screen and (max-width: 768px) {
+        @media screen and (max-width: 320px) {
+            body {
+                width: 320px;
+            }
+
             .container {
                 flex-direction: column;
                 height: auto;
             }
 
-            /* .left-content {
-                align-items: center;
-                width: 100%;
-                height: 80vh;
+            .left-content {
+                top: 18px;
+                left: 30px;
+                width: 80%;
+                height: 94vh;
                 position: relative;
                 border: none;
-                margin-bottom: 20px;
+            }
+
+            .left-content img {
+                width: 160px;
+                height: 18vh;
+                margin-bottom: 0px;
+            }
+
+            .left-content #icon {
+                float: right;
+                font-size: 34px;
+                padding: 23px 0px 0px 40px;
+            }
+
+            .form h3 {
+                font-size: 15px;
+                color: white;
+                font-weight: 500;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                padding: 0px 22px;
+            }
+
+            form,
+            input {
+                width: 80%;
+                height: 6vh;
+                padding: 0px 12px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 10px 32.5%;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .forgot a {
+                font-size: 11px;
+                top: 330px;
+                left: 20px;
+            }
+
+            .front-site a {
+                position: absolute;
+                top: 330px;
+                left: 156px;
+                font-size: 11px;
+            }
+
+            .admin-login a {
+                position: absolute;
+                top: 346px;
+                left: 150px;
+                font-size: 11px;
             }
 
             .right-content {
-                width: 100%;
+                width: 85%;
                 height: auto;
-            } */
-        }
+            }
 
-        */
+            .content-side {
+                padding: 13px 0px 20px 39px;
+                color: white;
+                font-family: sans-serif;
+                font-size: 10px;
+                display: block;
+            }
+
+            .button1 {
+                display: flex;
+                margin: 4px 24px;
+            }
+
+            .button1 button {
+                font-size: 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+
+            .superadmin {
+                padding: 8px 4px;
+            }
+
+            .admin {
+                padding: 8px 10px;
+            }
+
+            .doctor {
+                padding: 8px 8px;
+            }
+
+            .button2 {
+                display: flex;
+                margin: 6px 24px;
+            }
+
+            .button2 button {
+                font-size: 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+
+            .pharmacist {
+                padding: 8px 6px;
+            }
+
+            .pathologist {
+                padding: 8px 7px;
+            }
+
+            .radiologist {
+                padding: 8px 6px;
+            }
+
+            .button3 {
+                display: flex;
+                margin: 6px 24px;
+            }
+
+            .button3 button {
+                font-size: 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+
+            .accountant {
+                padding: 8px 6px;
+            }
+
+            .receptionist {
+                padding: 8px 8px;
+            }
+
+            .nurse {
+                padding: 8px 8.5px;
+            }
+
+        }
     </style>
 </head>
 
@@ -213,34 +385,33 @@
                     Sign In</button>
             </div>
             <div class="button1">
-                <button onclick="displayTextbtnsuper()"
-                    style="background-color: #0084B4; color: white; padding: 8px 24.5px;"><i
-                        class="bi bi-person-badge"></i>
-                    Super Admin</button>
-                <button onclick="displayTextbtnadmin()"
-                    style="background-color: #1bbed3; color: white; padding: 8px 34px;"><i class="bi bi-person"></i>
+                <button onclick="displayTextbtnsuper()" class="superadmin"
+                    style="background-color: #0084B4; color: white;">
+                    <span><i class="bi bi-person-badge"></i>
+                    Super Admin</span>
+                </button>
+                <button onclick="displayTextbtnadmin()" class="admin"
+                    style="background-color: #1bbed3; color: white;"><i class="bi bi-person"></i>
                     Admin</button>
-                <button onclick="displayTextbtndoctor()"
-                    style="background-color: #999999; color: white; padding: 8px 32px;"><i
-                        class="bi bi-file-person-fill"></i> Doctor</button>
+                <button onclick="displayTextbtndoctor()" class="doctor"
+                    style="background-color: #999999; color: white;"><i class="bi bi-file-person-fill"></i>
+                    Doctor</button>
             </div>
             <div class="button2">
-                <button onclick="displayTextbtnpharmacist()"
-                    style="background-color: #999; color: white; padding: 8px 38px;">Pharmacist</button>
-                <button onclick="displayTextbtnpathologist()"
-                    style="background-color: #e91e63; color: white; padding: 8px 22px;"><i
-                        class="bi bi-capsule"></i>Pathologist</button>
-                <button onclick="displayTextbtnradiologist()"
-                    style="background-color: #4aa64e; color: white; padding: 8px 26px;">Radiologist</button>
+                <button onclick="displayTextbtnpharmacist()" class="pharmacist"
+                    style="background-color: #999; color: white;">Pharmacist</button>
+                <button onclick="displayTextbtnpathologist()" class="pathologist"
+                    style="background-color: #e91e63; color: white;"><i class="bi bi-capsule"></i>Pathologist</button>
+                <button onclick="displayTextbtnradiologist()" class="radiologist"
+                    style="background-color: #4aa64e; color: white;">Radiologist</button>
             </div>
             <div class="button3">
-                <button onclick="displayTextbtnaccountant()"
-                    style="background-color: #079fb7; color: white; padding: 8px 32px;"><i
-                        class="bi bi-calculator"></i>Accountant</button>
-                <button onclick="displayTextbtnreceptionist()"
-                    style="background-color: #0084B4; color: white; padding: 8px 25px;">Receptionist</button>
-                <button onclick="displayTextbtnnurse()"
-                    style="background-color: #1bbed3; color: white; padding: 8px 35px;"><i
+                <button onclick="displayTextbtnaccountant()" class="accountant"
+                    style="background-color: #079fb7; color: white;"><i class="bi bi-calculator"></i>Accountant</button>
+                <button onclick="displayTextbtnreceptionist()" class="receptionist"
+                    style="background-color: #0084B4; color: white;">Receptionist</button>
+                <button onclick="displayTextbtnnurse()" class="nurse"
+                    style="background-color: #1bbed3; color: white;"><i
                         class="bi bi-bandaid"></i>Nurse</button>
             </div>
             <div class="forgot">
@@ -287,65 +458,65 @@
     </div>
     <script>
         function displayTextbtnsuper() {
-            var displayText = "superadmin@gmail.com"; // Change this to the text you want to display
+            var displayText = "superadmin@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "superadmin@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "superadmin@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnadmin() {
-            var displayText = "admin@gmail.com"; // Change this to the text you want to display
+            var displayText = "admin@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "admin@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "admin@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtndoctor() {
-            var displayText = "doctor@gmail.com"; // Change this to the text you want to display
+            var displayText = "doctor@gmail.com"; 
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "doctor@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "doctor@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnpharmacist() {
-            var displayText = "pharmacist@gmail.com"; // Change this to the text you want to display
+            var displayText = "pharmacist@gmail.com"; 
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "pharmacist@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "pharmacist@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnpathologist() {
-            var displayText = "pathologist@gmail.com"; // Change this to the text you want to display
+            var displayText = "pathologist@gmail.com"; 
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "pathologist@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "pathologist@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnradiologist() {
-            var displayText = "radiologist@gmail.com"; // Change this to the text you want to display
+            var displayText = "radiologist@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "radiologist@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "radiologist@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnaccountant() {
-            var displayText = "accountantn@gmail.com"; // Change this to the text you want to display
+            var displayText = "accountantn@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "accountant@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "accountant@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnreceptionist() {
-            var displayText = "receptionist@gmail.com"; // Change this to the text you want to display
+            var displayText = "receptionist@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "receptionist@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "receptionist@gmail.com";
             document.getElementById("passwordInput").value = displayPassword;
         }
 
         function displayTextbtnnurse() {
-            var displayText = "nurse@gmail.com"; // Change this to the text you want to display
+            var displayText = "nurse@gmail.com";
             document.getElementById("displayInput").value = displayText;
-            var displayPassword = "nurse@gmail.com"; // Change this to the password you want to display
+            var displayPassword = "nurse@gmail.com"; 
             document.getElementById("passwordInput").value = displayPassword;
         }
 
